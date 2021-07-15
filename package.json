@@ -1,0 +1,24 @@
+{
+  "name": "litepq",
+  "version": "1.0.9",
+  "description": "A small and might priority queue implementation in JavaScript",
+  "main": "pq.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertzhidealx/LitePQ.git"
+  },
+  "author": "Robert Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertzhidealx/LitePQ/issues"
+  },
+  "homepage": "https://github.com/robertzhidealx/LitePQ#readme",
+  "keywords": [
+    "javascript",
+    "priority",
+    "queue"
+  ]
+}
