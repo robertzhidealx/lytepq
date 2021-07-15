@@ -1,4 +1,4 @@
-export default class LitePQ {
+export default class LytePQ {
   static _INF = Number.MAX_SAFE_INTEGER;
 
   /***
@@ -14,7 +14,7 @@ export default class LitePQ {
     this.compare = compareFn;
 
     if (this.length) {
-      for (let i = this.length >>> 1; i >= 0; i--) this.heapify(i);
+      for (let i = (this.length >>> 1) - 1; i >= 0; i--) this.heapify(i);
     }
   }
 
@@ -91,7 +91,7 @@ export default class LitePQ {
     const { q, updateKey } = this;
     let { length } = this;
     length++;
-    q[length - 1] = LitePQ._INF;
+    q[length - 1] = LytePQ._INF;
     updateKey(length - 1, k);
   }
 }

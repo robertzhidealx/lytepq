@@ -1,24 +1,24 @@
 {
-  "name": "litepq",
-  "version": "1.0.9",
-  "description": "A small and might priority queue implementation in JavaScript",
-  "main": "pq.js",
+  "name": "lytepq",
+  "version": "1.0.3",
+  "description": "A small and mighty priority queue in JavaScript.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robertzhidealx/LitePQ.git"
+    "url": "git+https://github.com/robertzhidealx/LytePQ.git"
   },
-  "author": "Robert Zhang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/robertzhidealx/LitePQ/issues"
-  },
-  "homepage": "https://github.com/robertzhidealx/LitePQ#readme",
   "keywords": [
     "javascript",
     "priority",
     "queue"
-  ]
+  ],
+  "author": "Robert Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertzhidealx/LytePQ/issues"
+  },
+  "homepage": "https://github.com/robertzhidealx/LytePQ#readme"
 }
