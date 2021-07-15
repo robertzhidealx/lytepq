@@ -60,8 +60,8 @@ export default class LitePQ {
     const { q, heapify } = this;
     let { length } = this;
     if (length < 1) throw new Error("heap underflow");
-    let t = q[0];
-    q[0] = t[length - 1];
+    const t = q[0];
+    q[0] = q[length - 1];
     length--;
     heapify(0);
     return t;
