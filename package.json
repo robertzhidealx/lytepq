@@ -1,15 +1,23 @@
 {
   "name": "lytepq",
-  "version": "1.0.3",
+  "version": "1.0.13",
   "description": "A small and mighty priority queue in JavaScript.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/robertzhidealx/LytePQ.git"
   },
+  "files": [
+    "src/index.js",
+    "src/index.d.ts",
+    "lib/index.js"
+  ],
   "keywords": [
     "javascript",
     "priority",
@@ -20,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/robertzhidealx/LytePQ/issues"
   },
-  "homepage": "https://github.com/robertzhidealx/LytePQ#readme"
+  "homepage": "https://github.com/robertzhidealx/LytePQ#readme",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "rollup": "^2.53.2"
+  }
 }
