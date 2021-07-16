@@ -1,6 +1,6 @@
 {
   "name": "lytepq",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A small and mighty priority queue in JavaScript.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -21,10 +21,13 @@
   "keywords": [
     "javascript",
     "priority",
-    "queue"
+    "queue",
+    "binary heap",
+    "data structures",
+    "algorithms"
   ],
   "author": "Robert Zhang",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/robertzhidealx/LytePQ/issues"
   },
