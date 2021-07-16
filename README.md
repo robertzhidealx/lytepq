@@ -48,3 +48,7 @@ const smallestObj = objectQ.pop(); // [1, 2]
 ## Contributing
 
 Issues and pull requests are welcome! Contact [me](https://twitter.com/Robert54161541) on Twitter if needed.
+
+## Credits
+
+This library took inspiration from [Vladimir Agafonkin](https://github.com/mourner)'s [tinyqueue](https://github.com/mourner/tinyqueue).
