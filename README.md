@@ -18,7 +18,7 @@ Import into your project in the following ways.
 ```js
 import LytePQ from "lytepq"; // ES
 
-const LytePQ = require("lytepq"); // CommonJS
+const LytePQ = require("lytepq").default; // CommonJS
 ```
 
 ## Demo
