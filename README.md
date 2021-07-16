@@ -1,4 +1,4 @@
-# LytePQ
+# LytePQ &middot; [![npm version](https://badge.fury.io/js/lytepq.svg)](https://badge.fury.io/js/lytepq) [![license](https://img.shields.io/github/license/robertzhidealx/lytepq)](https://github.com/robertzhidealx/lytepq/blob/main/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-cyan)](https://github.com/robertzhidealx/lytepq/pulls)
 
 A small and mighty priority queue in JavaScript.
 
@@ -7,6 +7,7 @@ A small and mighty priority queue in JavaScript.
 ✅ Packed with all basic priority queue operations.<br />
 🚀 Unopinionated functionality exposure - you decide how to use LytePQ.<br />
 💻 Perfect for competitive programming, online tests, interviews, etc. Dijkstra's in JS made easy!<br />
+📔 Comprehensive JSDoc annotations and intellisense.<br />
 🔭 TypeScript support.
 
 ## Getting Started
