@@ -1,11 +1,12 @@
 {
   "name": "lytepq",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A small and mighty priority queue in JavaScript.",
   "main": "lib/index.js",
   "module": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
+    "lint": "eslint src/index.js src/test.js rollup.config.js",
     "build": "rollup -c",
     "test": "tape -r esm src/test.js"
   },
@@ -34,6 +35,9 @@
   "homepage": "https://github.com/robertzhidealx/LytePQ#readme",
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.30.0",
     "esm": "^3.2.25",
     "rollup": "^2.53.2",
     "tape": "^5.2.2"

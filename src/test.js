@@ -2,11 +2,9 @@ import { test } from "tape";
 import LytePQ from ".";
 
 const data = [];
-for (let i = 0; i < 100; i++) {
-  data.push(Math.trunc(100 * Math.random()));
-}
-const ascending = data.slice().sort((a, b) => a - b);
-const descending = data.slice().sort((a, b) => b - a);
+for (let i = 0; i < 100; i++) data.push(Math.trunc(100 * Math.random()));
+const ascending = data.slice().sort((a, b) => a - b),
+  descending = data.slice().sort((a, b) => b - a);
 
 test("min priority queue", (t) => {
   const pq = new LytePQ();
@@ -37,9 +35,8 @@ test("max priority queue", (t) => {
 });
 
 test("pass data to constructor", (t) => {
-  const pq = new LytePQ(data.slice());
-
-  const res = [];
+  const pq = new LytePQ(data.slice()),
+    res = [];
   while (pq.length) res.push(pq.pop());
 
   t.same(res, ascending);
@@ -49,23 +46,21 @@ test("pass data to constructor", (t) => {
 
 test("max priority queue with object items", (t) => {
   const pq = new LytePQ(
-    [
+      [
+        { k: 0, v: 8 },
+        { k: 1, v: 7 },
+        { k: 2, v: -1 },
+        { k: 3, v: 10 },
+      ],
+      (a, b) => b.v - a.v
+    ),
+    sorted = [
+      { k: 3, v: 10 },
       { k: 0, v: 8 },
       { k: 1, v: 7 },
       { k: 2, v: -1 },
-      { k: 3, v: 10 },
     ],
-    (a, b) => b.v - a.v
-  );
-
-  const sorted = [
-    { k: 3, v: 10 },
-    { k: 0, v: 8 },
-    { k: 1, v: 7 },
-    { k: 2, v: -1 },
-  ];
-
-  const res = [];
+    res = [];
   while (pq.length) res.push(pq.pop());
   console.log(res, pq.queue);
 
@@ -76,23 +71,21 @@ test("max priority queue with object items", (t) => {
 
 test("max priority queue with array items", (t) => {
   const pq = new LytePQ(
-    [
-      [0, 1],
-      [1, 2],
-      [2, 3],
+      [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+      ],
+      (a, b) => b[1] - a[1]
+    ),
+    sorted = [
       [3, 4],
+      [2, 3],
+      [1, 2],
+      [0, 1],
     ],
-    (a, b) => b[1] - a[1]
-  );
-
-  const sorted = [
-    [3, 4],
-    [2, 3],
-    [1, 2],
-    [0, 1],
-  ];
-
-  const res = [];
+    res = [];
   while (pq.length) res.push(pq.pop());
 
   t.same(res, sorted);
