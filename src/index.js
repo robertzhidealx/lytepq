@@ -3,8 +3,6 @@ export default class LytePQ {
     this.queue = data;
     this.length = this.queue.length;
     this._compare = compareFn;
-    this._INF =
-      compareFn(1, 0) > 0 ? Number.MAX_SAFE_INTEGER : Number.MIN_SAFE_INTEGER;
 
     if (this.length) {
       for (let i = (this.length >>> 1) - 1; i >= 0; i--) this.heapify(i);
@@ -25,11 +23,10 @@ export default class LytePQ {
 
   heapify(i) {
     const { queue, length } = this;
-    const l = i * 2;
-    const r = 2 * i + 1;
-    let t;
+    const l = (i << 1) + 1;
+    const r = l + 1;
+    let t = i;
     if (l < length && this._compare(queue[l], queue[i]) < 0) t = l;
-    else t = i;
     if (r < length && this._compare(queue[r], queue[t]) < 0) t = r;
     if (t !== i) {
       this._swap(i, t);
@@ -39,7 +36,7 @@ export default class LytePQ {
 
   pop() {
     const { queue } = this;
-    if (this.length < 1) throw new Error("heap underflow");
+    if (!this.length) throw new Error("heap underflow");
     const t = queue[0];
     queue[0] = queue[this.length - 1];
     this.length--;
@@ -48,11 +45,12 @@ export default class LytePQ {
   }
 
   updateKey(i, k) {
-    const { queue } = this;
-    if (this._compare(k, queue[i]) > 0) throw new Error("invalid key");
+    const { queue, _compare } = this;
+    if (queue[i] !== undefined && _compare(k, queue[i]) > 0)
+      throw new Error("invalid key");
     queue[i] = k;
-    while (i > 0 && this._compare(queue[i >>> 1], queue[i]) > 0) {
-      const parent = i >>> 1;
+    while (i > 0 && this._compare(queue[(i - 1) >>> 1], queue[i]) > 0) {
+      const parent = (i - 1) >>> 1;
       this._swap(i, parent);
       i = parent;
     }
@@ -61,7 +59,7 @@ export default class LytePQ {
   push(k) {
     const { queue } = this;
     this.length++;
-    queue[this.length - 1] = this._INF;
+    queue[this.length - 1] = undefined;
     this.updateKey(this.length - 1, k);
   }
 }

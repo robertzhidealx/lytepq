@@ -67,14 +67,40 @@ test("max priority queue with object items", (t) => {
 
   const res = [];
   while (pq.length) res.push(pq.pop());
+  console.log(res, pq.queue);
 
   t.same(res, sorted);
 
   t.end();
 });
 
+test("max priority queue with array items", (t) => {
+  const pq = new LytePQ(
+    [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 4],
+    ],
+    (a, b) => b[1] - a[1]
+  );
+
+  const sorted = [
+    [3, 4],
+    [2, 3],
+    [1, 2],
+    [0, 1],
+  ];
+
+  const res = [];
+  while (pq.length) res.push(pq.pop());
+
+  t.same(res, sorted);
+
+  t.end();
+});
 test("initialize priority queue with empty array", (t) => {
-  const pq = new LytePQ([]);
+  const pq = new LytePQ();
 
   t.same(pq.queue, []);
 
