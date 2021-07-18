@@ -1,6 +1,6 @@
 {
   "name": "lytepq",
-  "version": "1.1.3",
+  "version": "1.1.6",
   "description": "A small and mighty suite of data structures in JavaScript.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/robertzhidealx/LytePQ.git"
   },
   "files": [
-    "src/index.js",
+    "src/**/index.js",
     "src/index.d.ts",
     "lib/index.js"
   ],
@@ -24,6 +24,8 @@
     "priority",
     "queue",
     "binary heap",
+    "disjoint sets",
+    "union find",
     "data structures",
     "algorithms"
   ],
