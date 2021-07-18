@@ -1,8 +1,16 @@
-# LytePQ &middot; [![npm version](https://badge.fury.io/js/lytepq.svg)](https://badge.fury.io/js/lytepq) [![license](https://img.shields.io/github/license/robertzhidealx/lytepq)](https://github.com/robertzhidealx/lytepq/blob/main/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-cyan)](https://github.com/robertzhidealx/lytepq/pulls)
+# Lyte &middot; [![npm version](https://badge.fury.io/js/lytepq.svg)](https://badge.fury.io/js/lytepq) [![license](https://img.shields.io/github/license/robertzhidealx/lytepq)](https://github.com/robertzhidealx/lytepq/blob/main/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-cyan)](https://github.com/robertzhidealx/lytepq/pulls)
 
-A small and mighty priority queue in JavaScript.
+A small and mighty suite of data structures in JavaScript.
 
-## Perks
+Currently supporting **LytePQ** and **LyteSets**, and more to come.
+
+## Install
+
+Install with either Yarn or NPM via `yarn add lytepq` or `npm add lytepq`.
+
+## LytePQ
+
+### Perks
 
 ✅ Packed with all basic priority queue operations.<br />
 🚀 Unopinionated functionality exposure - you decide how to use LytePQ.<br />
@@ -10,19 +18,17 @@ A small and mighty priority queue in JavaScript.
 📔 Comprehensive JSDoc annotations and intellisense.<br />
 🔭 TypeScript support.
 
-## Getting Started
-
-Install with either Yarn or NPM via `yarn add lytepq` or `npm add lytepq`.
+### Getting Started
 
 Import into your project in the following ways.
 
 ```js
-import LytePQ from "lytepq"; // ES
+import { LytePQ } from "lytepq"; // ES
 
-const LytePQ = require("lytepq").default; // CommonJS
+const { LytePQ } = require("lytepq"); // CommonJS
 ```
 
-## Demo
+### Demo
 
 ```js
 // LytePQ is a min priority queue by default
@@ -44,6 +50,36 @@ const objectQ = new LytePQ(
   (a, b) => a[1] - b[1]
 );
 const smallestObj = objectQ.pop(); // [1, 2]
+```
+
+## LyteSets
+
+### Perks
+
+✅ Packed with all basic disjoint-set operations.<br />
+🚀 Two implementations to choose from: array-based or tree-based (under development).<br />
+💻 Perfect for competitive programming, online tests, interviews, etc. Core codebase contains as few as 20 lines of code.<br />
+📔 Comprehensive JSDoc annotations and intellisense.<br />
+🔭 TypeScript support.
+
+### Getting Started
+
+```js
+import { LyteSets } from "lytepq"; // ES
+
+const { LyteSets } = require("lytepq"); // CommonJS
+```
+
+### Demo
+
+```js
+const sets = new LyteSets(10);
+
+sets.union(2, 10);
+sets.union(5, 2);
+
+// true
+const isConnected = sets.query(2, 10) && sets.query(2, 5) && sets.query(5, 10);
 ```
 
 ## Contributing

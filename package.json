@@ -4,7 +4,7 @@
   "description": "A small and mighty suite of data structures in JavaScript.",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "types": "src/index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "lint": "eslint src/**/*.js rollup.config.js",
     "build": "rollup -c",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/robertzhidealx/LytePQ.git"
   },
   "files": [
-    "src/index.js",
+    "src/**/index.js",
     "src/index.d.ts",
     "lib/index.js"
   ],
@@ -24,6 +24,8 @@
     "priority",
     "queue",
     "binary heap",
+    "disjoint sets",
+    "union find",
     "data structures",
     "algorithms"
   ],
@@ -41,6 +43,8 @@
     "eslint": "^7.30.0",
     "esm": "^3.2.25",
     "rollup": "^2.53.2",
-    "tape": "^5.2.2"
+    "rollup-plugin-dts": "^3.0.2",
+    "tape": "^5.2.2",
+    "typescript": "^4.3.5"
   }
 }
