@@ -1,13 +1,14 @@
 import buble from "@rollup/plugin-buble";
+import multi from "@rollup/plugin-multi-entry";
 
 export default {
-  input: "src/index.js",
+  input: ["src/lytepq/index.js", "src/lytesets/index.js"],
   output: {
-    name: "LytePQ",
+    name: "Lyte",
     file: "lib/index.js",
     format: "umd",
-    exports: "default",
+    exports: "auto",
     indent: false,
   },
-  plugins: [buble()],
+  plugins: [buble(), multi()],
 };

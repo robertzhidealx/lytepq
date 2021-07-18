@@ -1,4 +1,4 @@
-export default class LytePQ {
+export class LytePQ {
   constructor(data = [], compareFn = (a, b) => a - b) {
     this.queue = data, this.length = this.queue.length;
     this._compare = compareFn;

@@ -18,5 +18,6 @@ module.exports = {
     "no-extra-parens": ["error", "all"],
     curly: ["error", "multi"],
     "max-len": ["error", { code: 80 }],
+    "object-curly-spacing": ["error", "always"]
   },
 };

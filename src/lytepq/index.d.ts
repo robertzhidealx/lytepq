@@ -1,4 +1,4 @@
-export default class LytePQ<T> {
+export class LytePQ<T> {
   public queue: T[];
   public length: number;
   private _compare: (a: T, b: T) => number;

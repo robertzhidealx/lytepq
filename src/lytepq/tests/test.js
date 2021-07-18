@@ -1,5 +1,5 @@
 import { test } from "tape";
-import LytePQ from ".";
+import { LytePQ } from "..";
 
 const data = [];
 for (let i = 0; i < 100; i++) data.push(Math.trunc(100 * Math.random()));
@@ -62,7 +62,6 @@ test("max priority queue with object items", (t) => {
     ],
     res = [];
   while (pq.length) res.push(pq.pop());
-  console.log(res, pq.queue);
 
   t.same(res, sorted);
 
