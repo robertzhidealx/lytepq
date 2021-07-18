@@ -1,5 +1,5 @@
 import { test } from "tape";
-import { LyteSets } from "..";
+import { LyteSets } from "../src/lytesets";
 
 const N = 100;
 

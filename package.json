@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint src/**/*.js rollup.config.js",
     "build": "rollup -c",
-    "test": "tape -r esm src/**/test.js"
+    "test": "tape -r esm tests/*.js"
   },
   "repository": {
     "type": "git",

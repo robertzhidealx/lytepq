@@ -1,5 +1,5 @@
 import { test } from "tape";
-import { LytePQ } from "..";
+import { LytePQ } from "../src/lytepq";
 
 const data = [];
 for (let i = 0; i < 100; i++) data.push(Math.trunc(100 * Math.random()));
