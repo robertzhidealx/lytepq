@@ -1,4 +1,4 @@
-declare class LytePQ<T> {
+export class LytePQ<T> {
   public queue: T[];
   public length: number;
   private _compare: (a: T, b: T) => number;
@@ -47,13 +47,3 @@ declare class LytePQ<T> {
    */
   push: (k: T) => void;
 }
-
-declare class LyteSets {
-  constructor(size: number);
-  forest: number[];
-  find(x: number): number;
-  union(a: number, b: number): void;
-  query(a: number, b: number): boolean;
-}
-
-export { LytePQ, LyteSets };

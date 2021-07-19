@@ -1,5 +1,5 @@
 import { test } from "tape";
-import { LytePQ } from "../src/lytepq";
+import { LytePQ } from "../src";
 
 const data = [];
 for (let i = 0; i < 100; i++) data.push(Math.trunc(100 * Math.random()));
@@ -63,6 +63,32 @@ test("max priority queue with object items", (t) => {
     res = [];
   while (pq.length) res.push(pq.pop());
 
+  t.same(res, sorted);
+
+  t.end();
+});
+
+test("pop removes specified key", (t) => {
+  const pq = new LytePQ(
+      [
+        { k: 0, v: 8 },
+        { k: 1, v: 7 },
+        { k: 2, v: -1 },
+        { k: 3, v: 10 },
+      ],
+      (a, b) => b.v - a.v
+    ),
+    sorted = [
+      { k: 3, v: 10 },
+      { k: 1, v: 7 },
+      { k: 2, v: -1 },
+    ],
+    res = [],
+    removed = pq.pop({ k: 0, v: 8 });
+
+  while (pq.length) res.push(pq.pop());
+
+  t.same(removed, { k: 0, v: 8 });
   t.same(res, sorted);
 
   t.end();

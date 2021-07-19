@@ -1,6 +1,6 @@
 {
   "name": "lytepq",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A small and mighty suite of data structures in JavaScript.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -43,6 +43,8 @@
     "eslint": "^7.30.0",
     "esm": "^3.2.25",
     "rollup": "^2.53.2",
-    "tape": "^5.2.2"
+    "rollup-plugin-dts": "^3.0.2",
+    "tape": "^5.2.2",
+    "typescript": "^4.3.5"
   }
 }
