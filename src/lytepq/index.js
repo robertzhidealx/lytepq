@@ -24,12 +24,20 @@ export class LytePQ {
     if (t !== i) this._swap(i, t), this.heapify(t);
   }
 
-  pop() {
+  pop(k = undefined) {
     const { queue } = this;
     if (!this.length) throw new Error("heap underflow");
-    const t = queue[0];
-    queue[0] = queue[this.length - 1], this.length--, this.heapify(0);
-    return t;
+    let t = 0, res = queue[t];
+    if (k !== undefined) {
+      const kStr = JSON.stringify(k);
+      for (let i = 0; i < this.length; i++) 
+        if (JSON.stringify(queue[i]) === kStr) {
+          t = i, res = queue[t];
+          break;
+        }
+    }
+    queue[t] = queue[this.length - 1], this.length--, this.heapify(t);
+    return res;
   }
 
   updateKey(i, k) {
