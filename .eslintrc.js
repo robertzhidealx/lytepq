@@ -11,13 +11,14 @@ module.exports = {
   },
   rules: {
     indent: ["error", 2],
-    "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],
+    curly: ["error", "multi"],
+    "linebreak-style": ["error", "unix"],
     "one-var": ["error", "consecutive"],
     "no-extra-parens": ["error", "all"],
-    curly: ["error", "multi"],
     "max-len": ["error", { code: 80 }],
-    "object-curly-spacing": ["error", "always"]
+    "object-curly-spacing": ["error", "always"],
+    "space-infix-ops": "error"
   },
 };

@@ -10,7 +10,7 @@ export class LyteSets {
   }
 
   union(a, b) {
-    const { forest }  =this;
+    const { forest } = this;
     forest[this.find(a)] = forest[this.find(b)];
   }
 
