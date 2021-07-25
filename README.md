@@ -1,12 +1,12 @@
-# Lyte &middot; [![npm version](https://badge.fury.io/js/lytepq.svg)](https://badge.fury.io/js/lytepq) [![license](https://img.shields.io/github/license/robertzhidealx/lytepq)](https://github.com/robertzhidealx/lytepq/blob/main/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-cyan)](https://github.com/robertzhidealx/lytepq/pulls)
+# LytePQ &middot; [![npm version](https://badge.fury.io/js/lytepq.svg)](https://badge.fury.io/js/lytepq) [![license](https://img.shields.io/github/license/robertzhidealx/lytepq)](https://github.com/robertzhidealx/lytepq/blob/main/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-cyan)](https://github.com/robertzhidealx/lytepq/pulls)
 
-A small and mighty suite of data structures in JavaScript.
+A small and mighty priority queue library in JavaScript.
 
-Currently supporting **LytePQ** and **LyteSets**, and more to come.
+Servicing in parallel with **LyteSets** (under maintenance), a JavaScript disjoint sets library.
 
 ## Install
 
-Install with either Yarn or NPM via `yarn add lytepq` or `npm add lytepq`.
+Install with either Yarn or NPM via `yarn add lytepq` or `npm install lytepq`.
 
 ## LytePQ
 
@@ -52,7 +52,16 @@ const objectQ = new LytePQ(
 const smallestObj = objectQ.pop(); // [1, 2]
 ```
 
-## LyteSets
+### Advanced Use Cases
+
+```js
+const minQ = new LytePQ();
+pq.push(2), pq.push(1), pq.push(3);
+// removes and returns the first instance of the specified item
+const specified = pq.pop(2); // 2
+```
+
+<!-- ## LyteSets
 
 ### Perks
 
@@ -80,7 +89,7 @@ sets.union(5, 2);
 
 // true
 const isConnected = sets.query(2, 10) && sets.query(2, 5) && sets.query(5, 10);
-```
+``` -->
 
 ## Contributing
 
